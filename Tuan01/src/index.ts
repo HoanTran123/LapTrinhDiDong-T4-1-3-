@@ -36,15 +36,14 @@ class Person {
 }
 
 const person = new Person("John", 25);
-person.displayInfo();
+// person.displayInfo();
 
 
 class Student extends Person{
     grade: string;
-    
-  constructor(name: string, age: number, grade :string) {
-    this.name = name;
-    this.age = age;
+
+  constructor(name: string, age: number, grade: string) {
+    super(name, age);
     this.grade = grade;
   }
 
@@ -54,4 +53,4 @@ class Student extends Person{
 }
 
 const student = new Student("John", 25 , "A");
-person.displayInfo();
+student.displayInfo();
